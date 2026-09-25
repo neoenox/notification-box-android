@@ -8,6 +8,13 @@
     <issue id="GradleDependency" severity="ignore" />
 
     <!--
+      Gradle wrapper upgrades are handled as dedicated dependency changes. Treating
+      the appearance of a newer wrapper release as a lint error makes unrelated PRs
+      fail without any source or behavior regression.
+    -->
+    <issue id="AndroidGradlePluginVersion" severity="ignore" />
+
+    <!--
       AGP 9 built-in Kotlin is enabled. Room remains on the official
       com.android.legacy-kapt compatibility path for this release because a KSP
       migration changes the compiler pipeline and requires an independent migration PR.
