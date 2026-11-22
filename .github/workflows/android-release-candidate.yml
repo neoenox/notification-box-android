@@ -175,7 +175,7 @@ jobs:
           java-version: "17"
 
       - name: Download validated unsigned artifact
-        uses: actions/download-artifact@484a0b528fb4d7bd804637ccb632e47a0e638317
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
         with:
           name: ${{ needs.validate-unsigned.outputs.artifact_name }}
           path: unsigned-candidate
